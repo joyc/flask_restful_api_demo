@@ -9,6 +9,8 @@ from restdemo.resource.hello import HelloWorld
 
 db = SQLAlchemy()
 
+from restdemo.model.user import User as UserModel
+
 def create_app():
 
     app = Flask(__name__)
