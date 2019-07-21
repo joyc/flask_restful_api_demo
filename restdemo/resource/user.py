@@ -1,8 +1,5 @@
-from flask import Flask, request
-from flask_restful import Resource, Api, reqparse
+from flask_restful import Resource, reqparse
 
-app = Flask(__name__)
-api = Api(app)
 
 user_list = []
 
@@ -17,10 +14,6 @@ def min_length_str(min_length):
             return s
         raise Exception("String must be at least %i characters long" % min_length)
     return validate
-
-class HelloWorld(Resource):
-    def get(self):
-        return 'hello world'
 
 class User(Resource):
 
@@ -79,13 +72,6 @@ class User(Resource):
             return {'message': 'user not found'}
 
 class UserList(Resource):
-
+    
     def get(self):
         return user_list
-
-api.add_resource(HelloWorld, '/')
-api.add_resource(User, '/user/<string:username>')
-api.add_resource(UserList, '/users')
-
-if __name__ == '__main__':
-    app.run(debug=True)
