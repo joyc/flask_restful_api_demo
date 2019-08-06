@@ -18,8 +18,9 @@ def create_app():
     app.config.from_object(Config)
     db.init_app(app)
     migrate = Migrate(app, db)
+    jwt.init_app(app)
 
     api.add_resource(User, '/user/<string:username>')
     api.add_resource(UserList, '/users')
-    api.add_resource(Login, '/auth/login')
+    # api.add_resource(Login, '/auth/login')
     return app

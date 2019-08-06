@@ -28,31 +28,36 @@ class User(db.Model):
     def check_password(self, password):
         return check_password_hash(self.password_hash, password)
 
-    # def generate_token(self):
-    #     """Generates the access token"""
-    #     try:
-    #         # set up a payload with an expiration time
-    #         payload = {
-    #             'exp': datetime.utcnow() + timedelta(minutes=5),
-    #             'iat': datetime.utcnow(),
-    #             'sub': self.username
-    #         }
-    #         # create the byte string token using the payload and the SECRET key
-    #         jwt_token = jwt.encode(
-    #             payload,
-    #             current_app.config.get('SECRET'),
-    #             algorithm='HS256'
-    #         )
-    #         return jwt_token.decode()
-    #     except Exception as e:
-    #         # return an error in string format if an exception occurs
-    #         return str(e)
+    def add(self):
+        db.session.add(self)
+        db.session.commit()    
+
+    def delete(self):
+        db.session.delete(self)
+        db.session.commit()
+
+    def update(self):
+        db.session.commit()
+
+    @staticmethod
+    def get_by_username(username):
+        return db.session.query(User).filter(
+            User.username == username
+        ).first()
+
+    @staticmethod
+    def get_by_id(user_id):
+        return db.session.query(User).filter(
+            User.id == user_id
+        ).first()
+        
+    @staticmethod
+    def get_user_list():
+        return db.session.query(User).all()
 
     @staticmethod
     def authenticate(username, password):
-        user = db.session.query(User).filter(
-            User.username == username
-        ).first()
+        user = User.get_by_username(username)
         if user:
             # check password
             if user.check_password(password):
@@ -61,7 +66,5 @@ class User(db.Model):
     @staticmethod
     def identity(payload):
         user_id = payload['identity']
-        user = db.session.query(User).filter(
-            User.id == user_id
-        ).first()
+        user = User.get_by_id(user_id)
         return user

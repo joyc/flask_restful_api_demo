@@ -1,8 +1,8 @@
 from flask_restful import Resource, reqparse
 from flask import request, current_app
-import jwt
+from flask_jwt import jwt_required
 
-from restdemo import db
+
 from restdemo.model.user import User as UserModel
 
 user_list = []
@@ -34,9 +34,7 @@ class User(Resource):
         """
         get user detail infomation
         """
-        user = db.session.query(UserModel).filter(
-            UserModel.username == username
-        ).first()
+        user = UserModel.get_by_username(username)
         if user:
             return user.as_dict()
         return {'message': 'user not found'}, 404
@@ -46,9 +44,7 @@ class User(Resource):
         create a user
         """
         data = User.parser.parse_args()
-        user = db.session.query(UserModel).filter(
-            UserModel.username == username
-        ).first()
+        user = UserModel.get_by_username(username)
         if user:
             return {"message": 'user already exist'}
         user = UserModel(
@@ -56,22 +52,17 @@ class User(Resource):
             email=data['email']
         )
         user.set_password(data['password'])
-        db.session.add(user)
-        db.session.commit()
+        user.add()
         return user.as_dict(), 201
 
     def delete(self, username):
         """
         delete user
         """
-        user = db.session.query(UserModel).filter(
-            UserModel.username == username
-        ).first()
+        user = UserModel.get_by_username(username)
         if user:
-            data = User.parser.parse_args()
-            user.password_hash = data['password']
-            db.session.commit()
-            return user.as_dict()
+            user.delete()
+            return {"message": "user deleted"}
         else:
             return {"message": 'user not found'}, 204
 
@@ -79,36 +70,18 @@ class User(Resource):
         """
         update user
         """
-        user = db.session.query(UserModel).filter(
-            UserModel.username == username
-        ).first()
+        user = UserModel.get_by_username(username)
         if user:
             data = User.parser.parse_args()
             user.password_hash = data['password']
-            db.session.commit()
+            user.update()
             return user.as_dict()
         else:
             return {'message': 'user not found'}, 204
 
 class UserList(Resource):
     
+    @jwt_required()
     def get(self):
-        token = request.headers.get('Authorization')
-        try:
-            jwt.decode(
-                token,
-                current_app.config.get('SECRET'),
-                algorithms='HS256'
-            )
-        except jwt.ExpiredSignatureError:
-            # the token is expired, return an error string
-            return {
-                "message": "Expired token. Please login to get a new token"
-            }
-        except jwt.InvalidTokenError:
-            # the token is invalid, return an error string
-            return {
-                "message": "Invalid token. Please register or login"
-            }
-        usres = db.session.query(UserModel).all()
+        usres = UserModel.get_user_list()
         return [u.as_dict() for u in usres]
