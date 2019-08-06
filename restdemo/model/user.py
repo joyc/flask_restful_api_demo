@@ -1,4 +1,4 @@
-from restdemo.app import db
+from restdemo import db
 
 
 class User(db.Model):
@@ -6,3 +6,12 @@ class User(db.Model):
     username = db.Column(db.String(64), unique=True)
     password_hash = db.Column(db.String(128))
     email = db.Column(db.String(64))
+
+    def __repr__(self):
+        return "id={}, username={}".format(
+            self.id, self.username
+        )
+
+    def as_dict(self):
+        """使序列化返回字典"""
+        return {c.name: getattr(self, c.name) for c in self.__table__.columns}
