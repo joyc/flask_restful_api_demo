@@ -2,12 +2,15 @@ from flask import Flask
 from flask_restful import Api
 from flask_sqlalchemy import SQLAlchemy
 from flask_migrate import Migrate
+from flask_jwt import JWT
 
 db = SQLAlchemy()
 from restdemo.resource.user import User, UserList
 from restdemo.model.user import User as UserModel
-from restdemo.resource.auth import Login
+# from restdemo.resource.auth import Login
 from restdemo.config import Config
+
+jwt = JWT(None, UserModel.authenticate, UserModel.identity)
 
 def create_app():
     app = Flask(__name__)
