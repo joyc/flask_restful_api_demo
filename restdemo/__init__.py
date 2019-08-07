@@ -5,9 +5,11 @@ from flask_migrate import Migrate
 from flask_jwt import JWT
 
 db = SQLAlchemy()
-from restdemo.resource.user import User, UserList
+
 from restdemo.model.user import User as UserModel
-# from restdemo.resource.auth import Login
+from restdemo.model.tweet import Tweet
+from restdemo.resource.user import User, UserList
+from restdemo.resource.tweet import Tweet
 from restdemo.config import Config
 
 jwt = JWT(None, UserModel.authenticate, UserModel.identity)
@@ -22,5 +24,5 @@ def create_app():
 
     api.add_resource(User, '/user/<string:username>')
     api.add_resource(UserList, '/users')
-    # api.add_resource(Login, '/auth/login')
+    api.add_resource(Tweet, '/tweet/<string:username>')
     return app
