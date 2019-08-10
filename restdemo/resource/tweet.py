@@ -12,7 +12,7 @@ class Tweet(Resource):
         help='body required'
     )
 
-    @jwt_required
+    @jwt_required()
     def post(self, username):
         if current_identity.username != username:
             return {"message": "please use the right token"}
@@ -24,7 +24,7 @@ class Tweet(Resource):
         tweet.add()
         return {"message": "post success"}
 
-    @jwt_required
+    @jwt_required()
     def get(self, username):
         user = UserModel.get_by_username(username)
         if not user:
