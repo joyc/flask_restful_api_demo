@@ -1,0 +1,83 @@
+action: unittest, msg: getenv
+cwd: /Users/charlielee/PycharmProjects/apitest
+cmd: /Users/charlielee/PycharmProjects/apitest/.tox/unittest/bin/python -m pip install -r/Users/charlielee/PycharmProjects/apitest/requirements.txt
+Collecting alembic==1.0.11 (from -r /Users/charlielee/PycharmProjects/apitest/requirements.txt (line 1))
+  Downloading https://files.pythonhosted.org/packages/7b/8b/0c98c378d93165d9809193f274c3c6e2151120d955b752419c7d43e4d857/alembic-1.0.11.tar.gz (1.0MB)
+Collecting aniso8601==7.0.0 (from -r /Users/charlielee/PycharmProjects/apitest/requirements.txt (line 2))
+  Downloading https://files.pythonhosted.org/packages/45/a4/b4fcadbdab46c2ec2d2f6f8b4ab3f64fd0040789ac7f065eba82119cd602/aniso8601-7.0.0-py2.py3-none-any.whl (42kB)
+Collecting astroid==2.2.5 (from -r /Users/charlielee/PycharmProjects/apitest/requirements.txt (line 3))
+  Downloading https://files.pythonhosted.org/packages/d5/ad/7221a62a2dbce5c3b8c57fd18e1052c7331adc19b3f27f1561aa6e620db2/astroid-2.2.5-py3-none-any.whl (193kB)
+Collecting Click==7.0 (from -r /Users/charlielee/PycharmProjects/apitest/requirements.txt (line 4))
+  Downloading https://files.pythonhosted.org/packages/fa/37/45185cb5abbc30d7257104c434fe0b07e5a195a6847506c074527aa599ec/Click-7.0-py2.py3-none-any.whl (81kB)
+Collecting Flask==1.1.1 (from -r /Users/charlielee/PycharmProjects/apitest/requirements.txt (line 5))
+  Downloading https://files.pythonhosted.org/packages/9b/93/628509b8d5dc749656a9641f4caf13540e2cdec85276964ff8f43bbb1d3b/Flask-1.1.1-py2.py3-none-any.whl (94kB)
+Collecting Flask-JWT==0.3.2 (from -r /Users/charlielee/PycharmProjects/apitest/requirements.txt (line 6))
+  Downloading https://files.pythonhosted.org/packages/9b/8a/5d3b2e593f1fc5c1b464aa1cbf35023a4400a2b53ce6a52801f68d7a1eeb/Flask-JWT-0.3.2.tar.gz
+Collecting Flask-Migrate==2.5.2 (from -r /Users/charlielee/PycharmProjects/apitest/requirements.txt (line 7))
+  Downloading https://files.pythonhosted.org/packages/4b/22/d20a105f13c58fe590ef38ac59d5cabc1a917549ea8f90b0ca7b4e84f6be/Flask_Migrate-2.5.2-py2.py3-none-any.whl
+Collecting Flask-RESTful==0.3.7 (from -r /Users/charlielee/PycharmProjects/apitest/requirements.txt (line 8))
+  Downloading https://files.pythonhosted.org/packages/17/44/6e490150ee443ca81d5f88b61bb4bbb133d44d75b0b716ebe92489508da4/Flask_RESTful-0.3.7-py2.py3-none-any.whl
+Collecting Flask-SQLAlchemy==2.4.0 (from -r /Users/charlielee/PycharmProjects/apitest/requirements.txt (line 9))
+  Downloading https://files.pythonhosted.org/packages/08/ca/582442cad71504a1514a2f053006c8bb128844133d6076a4df17117545fa/Flask_SQLAlchemy-2.4.0-py2.py3-none-any.whl
+Collecting isort==4.3.21 (from -r /Users/charlielee/PycharmProjects/apitest/requirements.txt (line 10))
+  Downloading https://files.pythonhosted.org/packages/e5/b0/c121fd1fa3419ea9bfd55c7f9c4fedfec5143208d8c7ad3ce3db6c623c21/isort-4.3.21-py2.py3-none-any.whl (42kB)
+Collecting itsdangerous==1.1.0 (from -r /Users/charlielee/PycharmProjects/apitest/requirements.txt (line 11))
+  Downloading https://files.pythonhosted.org/packages/76/ae/44b03b253d6fade317f32c24d100b3b35c2239807046a4c953c7b89fa49e/itsdangerous-1.1.0-py2.py3-none-any.whl
+Collecting Jinja2==2.10.1 (from -r /Users/charlielee/PycharmProjects/apitest/requirements.txt (line 12))
+  Downloading https://files.pythonhosted.org/packages/1d/e7/fd8b501e7a6dfe492a433deb7b9d833d39ca74916fa8bc63dd1a4947a671/Jinja2-2.10.1-py2.py3-none-any.whl (124kB)
+Collecting lazy-object-proxy==1.4.1 (from -r /Users/charlielee/PycharmProjects/apitest/requirements.txt (line 13))
+  Downloading https://files.pythonhosted.org/packages/93/3c/279faaa32f456946c8b692576fc994f7401e905034c7428696409b80d3ce/lazy_object_proxy-1.4.1-cp37-cp37m-macosx_10_13_x86_64.whl
+Collecting Mako==1.0.14 (from -r /Users/charlielee/PycharmProjects/apitest/requirements.txt (line 14))
+  Downloading https://files.pythonhosted.org/packages/1b/a5/023aba3d69aacef6bfc13797bdc3dd03c6fb4ae2dcd2fde7dffc37233924/Mako-1.0.14.tar.gz (462kB)
+Collecting MarkupSafe==1.1.1 (from -r /Users/charlielee/PycharmProjects/apitest/requirements.txt (line 15))
+  Downloading https://files.pythonhosted.org/packages/ce/c6/f000f1af136ef74e4a95e33785921c73595c5390403f102e9b231b065b7a/MarkupSafe-1.1.1-cp37-cp37m-macosx_10_6_intel.whl
+Collecting mccabe==0.6.1 (from -r /Users/charlielee/PycharmProjects/apitest/requirements.txt (line 16))
+  Using cached https://files.pythonhosted.org/packages/87/89/479dc97e18549e21354893e4ee4ef36db1d237534982482c3681ee6e7b57/mccabe-0.6.1-py2.py3-none-any.whl
+Collecting PyJWT==1.4.2 (from -r /Users/charlielee/PycharmProjects/apitest/requirements.txt (line 17))
+  Downloading https://files.pythonhosted.org/packages/b8/9c/1973e3117d43527a42f2a8afbc81e48d69a537d6e2c39412049b1592d1e2/PyJWT-1.4.2-py2.py3-none-any.whl
+Collecting pylint==2.3.1 (from -r /Users/charlielee/PycharmProjects/apitest/requirements.txt (line 18))
+  Downloading https://files.pythonhosted.org/packages/60/c2/b3f73f4ac008bef6e75bca4992f3963b3f85942e0277237721ef1c151f0d/pylint-2.3.1-py3-none-any.whl (765kB)
+Collecting python-dateutil==2.8.0 (from -r /Users/charlielee/PycharmProjects/apitest/requirements.txt (line 19))
+  Downloading https://files.pythonhosted.org/packages/41/17/c62faccbfbd163c7f57f3844689e3a78bae1f403648a6afb1d0866d87fbb/python_dateutil-2.8.0-py2.py3-none-any.whl (226kB)
+Collecting python-editor==1.0.4 (from -r /Users/charlielee/PycharmProjects/apitest/requirements.txt (line 20))
+  Downloading https://files.pythonhosted.org/packages/c6/d3/201fc3abe391bbae6606e6f1d598c15d367033332bd54352b12f35513717/python_editor-1.0.4-py3-none-any.whl
+Collecting pytz==2019.1 (from -r /Users/charlielee/PycharmProjects/apitest/requirements.txt (line 21))
+  Downloading https://files.pythonhosted.org/packages/3d/73/fe30c2daaaa0713420d0382b16fbb761409f532c56bdcc514bf7b6262bb6/pytz-2019.1-py2.py3-none-any.whl (510kB)
+Collecting six==1.12.0 (from -r /Users/charlielee/PycharmProjects/apitest/requirements.txt (line 22))
+  Downloading https://files.pythonhosted.org/packages/73/fb/00a976f728d0d1fecfe898238ce23f502a721c0ac0ecfedb80e0d88c64e9/six-1.12.0-py2.py3-none-any.whl
+Collecting SQLAlchemy==1.3.5 (from -r /Users/charlielee/PycharmProjects/apitest/requirements.txt (line 23))
+  Downloading https://files.pythonhosted.org/packages/62/3c/9dda60fd99dbdcbc6312c799a3ec9a261f95bc12f2874a35818f04db2dd9/SQLAlchemy-1.3.5.tar.gz (5.9MB)
+Collecting typed-ast==1.4.0 (from -r /Users/charlielee/PycharmProjects/apitest/requirements.txt (line 24))
+  Downloading https://files.pythonhosted.org/packages/a0/03/266268b053ad81b8aea17bc3f5e6d3cf074bb4372d229336867a67e17076/typed_ast-1.4.0-cp37-cp37m-macosx_10_9_x86_64.whl (215kB)
+Collecting Werkzeug==0.15.5 (from -r /Users/charlielee/PycharmProjects/apitest/requirements.txt (line 25))
+  Downloading https://files.pythonhosted.org/packages/d1/ab/d3bed6b92042622d24decc7aadc8877badf18aeca1571045840ad4956d3f/Werkzeug-0.15.5-py2.py3-none-any.whl (328kB)
+Collecting wrapt==1.11.2 (from -r /Users/charlielee/PycharmProjects/apitest/requirements.txt (line 26))
+  Downloading https://files.pythonhosted.org/packages/23/84/323c2415280bc4fc880ac5050dddfb3c8062c2552b34c2e512eb4aa68f79/wrapt-1.11.2.tar.gz
+Collecting gunicorn==19.9.0 (from -r /Users/charlielee/PycharmProjects/apitest/requirements.txt (line 28))
+  Using cached https://files.pythonhosted.org/packages/8c/da/b8dd8deb741bff556db53902d4706774c8e1e67265f69528c14c003644e6/gunicorn-19.9.0-py2.py3-none-any.whl
+Building wheels for collected packages: alembic, Flask-JWT, Mako, SQLAlchemy, wrapt
+  Building wheel for alembic (setup.py): started
+  Building wheel for alembic (setup.py): finished with status 'done'
+  Created wheel for alembic: filename=alembic-1.0.11-py2.py3-none-any.whl size=162179 sha256=fb148eaf3cd6d460daa0d4b67eea2406ae7ad70f6460900604abc03a6a202700
+  Stored in directory: /Users/charlielee/Library/Caches/pip/wheels/8b/65/b2/9837b4422d13e739c3324c428f1b3aa9e3c3df666bb420e4b3
+  Building wheel for Flask-JWT (setup.py): started
+  Building wheel for Flask-JWT (setup.py): finished with status 'done'
+  Created wheel for Flask-JWT: filename=Flask_JWT-0.3.2-cp37-none-any.whl size=5669 sha256=7a83e32972549fa46702f1b991ac2c1c1325f6829bc4914e1282329f27ca190c
+  Stored in directory: /Users/charlielee/Library/Caches/pip/wheels/a6/8b/1f/f42f18eea64a0884185293ff01c32124c49da0e62739815f51
+  Building wheel for Mako (setup.py): started
+  Building wheel for Mako (setup.py): finished with status 'done'
+  Created wheel for Mako: filename=Mako-1.0.14-cp37-none-any.whl size=75733 sha256=6782b0dc5dccb58b24c1793d8b4af70a01be6780c3e6ab3d933b14155219cabe
+  Stored in directory: /Users/charlielee/Library/Caches/pip/wheels/36/0e/1d/4b28d9bc3f835432132648d6d1d038a7b3d9dbfd7df453e0f1
+  Building wheel for SQLAlchemy (setup.py): started
+  Building wheel for SQLAlchemy (setup.py): finished with status 'done'
+  Created wheel for SQLAlchemy: filename=SQLAlchemy-1.3.5-cp37-cp37m-macosx_10_7_x86_64.whl size=1138789 sha256=66ddd45eac08906bc3e5594f7023a3e0a2b05ab02241bbf4a1d5145b775f3f4d
+  Stored in directory: /Users/charlielee/Library/Caches/pip/wheels/f4/74/97/23789e1e541fb3d64dc9a921a676539695b3d184cf77f5b009
+  Building wheel for wrapt (setup.py): started
+  Building wheel for wrapt (setup.py): finished with status 'done'
+  Created wheel for wrapt: filename=wrapt-1.11.2-cp37-cp37m-macosx_10_7_x86_64.whl size=33285 sha256=d5dbac20967c6a977516d63b11f51d09ce95f39e589e78d9758408f1b1cce593
+  Stored in directory: /Users/charlielee/Library/Caches/pip/wheels/d7/de/2e/efa132238792efb6459a96e85916ef8597fcb3d2ae51590dfd
+Successfully built alembic Flask-JWT Mako SQLAlchemy wrapt
+Installing collected packages: SQLAlchemy, MarkupSafe, Mako, python-editor, six, python-dateutil, alembic, aniso8601, typed-ast, lazy-object-proxy, wrapt, astroid, Click, Jinja2, itsdangerous, Werkzeug, Flask, PyJWT, Flask-JWT, Flask-SQLAlchemy, Flask-Migrate, pytz, Flask-RESTful, isort, mccabe, pylint, gunicorn
+Successfully installed Click-7.0 Flask-1.1.1 Flask-JWT-0.3.2 Flask-Migrate-2.5.2 Flask-RESTful-0.3.7 Flask-SQLAlchemy-2.4.0 Jinja2-2.10.1 Mako-1.0.14 MarkupSafe-1.1.1 PyJWT-1.4.2 SQLAlchemy-1.3.5 Werkzeug-0.15.5 alembic-1.0.11 aniso8601-7.0.0 astroid-2.2.5 gunicorn-19.9.0 isort-4.3.21 itsdangerous-1.1.0 lazy-object-proxy-1.4.1 mccabe-0.6.1 pylint-2.3.1 python-dateutil-2.8.0 python-editor-1.0.4 pytz-2019.1 six-1.12.0 typed-ast-1.4.0 wrapt-1.11.2
+WARNING: You are using pip version 19.2.1, however version 19.2.2 is available.
+You should consider upgrading via the 'pip install --upgrade pip' command.

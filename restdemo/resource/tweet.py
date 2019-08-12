@@ -30,4 +30,3 @@ class Tweet(Resource):
         if not user:
             return {"message": 'user not found'}, 404
         return [t.as_dict() for t in user.tweet]
-

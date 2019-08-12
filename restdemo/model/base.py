@@ -11,7 +11,7 @@ class Base(db.Model):
 
     def add(self):
         db.session.add(self)
-        db.session.commit()    
+        db.session.commit()
 
     def delete(self):
         db.session.delete(self)
