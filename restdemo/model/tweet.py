@@ -3,6 +3,7 @@ from sqlalchemy import ForeignKey, func
 from restdemo import db
 from restdemo.model.base import Base
 
+
 class Tweet(Base):
 
     id = db.Column(db.Integer, primary_key=True)

@@ -1,11 +1,8 @@
 from flask_restful import Resource, reqparse
-from flask import request, current_app
 from flask_jwt import jwt_required
-
 
 from restdemo.model.user import User as UserModel
 
-user_list = []
 
 def min_length_str(min_length):
     def validate(s):
@@ -18,6 +15,7 @@ def min_length_str(min_length):
             return s
         raise Exception("String must be at least %i characters long" % min_length)
     return validate
+
 
 class User(Resource):
 
@@ -38,7 +36,7 @@ class User(Resource):
         if user:
             return user.as_dict()
         return {'message': 'user not found'}, 404
-    
+
     def post(self, username):
         """
         create a user
@@ -81,8 +79,9 @@ class User(Resource):
         else:
             return {'message': 'user not found'}, 404
 
+
 class UserList(Resource):
-    
+
     @jwt_required()
     def get(self):
         usres = UserModel.get_user_list()

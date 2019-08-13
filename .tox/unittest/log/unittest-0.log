@@ -1,0 +1,9 @@
+action: unittest, msg: getenv
+cwd: /Users/charlielee/PycharmProjects/apitest/.tox
+cmd: /Users/charlielee/PycharmProjects/apitest/.env/bin/python3.7 -m virtualenv --no-download --python /Users/charlielee/PycharmProjects/apitest/.env/bin/python3.7 unittest
+Already using interpreter /Users/charlielee/PycharmProjects/apitest/.env/bin/python3.7
+Using base prefix '/Users/charlielee/anaconda3'
+New python executable in /Users/charlielee/PycharmProjects/apitest/.tox/unittest/bin/python3.7
+Also creating executable in /Users/charlielee/PycharmProjects/apitest/.tox/unittest/bin/python
+Installing setuptools, pip, wheel...
+done.
